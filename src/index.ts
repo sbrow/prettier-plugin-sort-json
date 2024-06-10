@@ -6,8 +6,11 @@ import type {
   NullLiteral,
   SpreadElement,
   StringLiteral,
+// @ts-ignore
 } from '@babel/types';
+// @ts-ignore
 import type { Parser } from 'prettier';
+// @ts-ignore
 import { parsers as babelParsers } from 'prettier/plugins/babel';
 
 /**
@@ -197,7 +200,7 @@ function sortAst(
 export const parsers = {
   json: {
     ...babelParsers.json,
-    async parse(text, options: any) {
+    async parse(text: string, options: any) {
       const jsonRootAst = await babelParsers.json.parse(text, options);
 
       // The Prettier JSON parser wraps the AST in a 'JsonRoot' node

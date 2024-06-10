@@ -15,7 +15,9 @@
 *.map
 *.tgz
 /dist/
+/.direnv
 /build/
+/result
 
 # Configuration files
 !.eslintrc.js
